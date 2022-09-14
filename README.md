@@ -64,28 +64,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De screenreader las in principe alles op. Wat aan de ene kant fijn kan zijn, maar bij een collectie van artikelen las hij ook echt alles op. Bij dit soort content zou ik alleen de titel willen weten en niet de beschrijving. Hierdoor duurt het dus heel lang voordat je naar de volgende items gaat. Af en toe leest de screenreader ook dingen die onzichtbaar zijn op het scherm.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Oplossingen:
+  De screenreader alleen de belangrijke dingen laten lezen. Dingen als headings, navigatie en bepaalde links. Achtergrond afbeeldingen die bedoelt zijn voor mooiheid hoeven niet voorgelezen te worden.
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Het tabben ging over het algemeen redelijk goed, behalve bij afbeeldingen met een horizontale scroll. Dan scrollt hij soms wel mee, maar soms wilt hij niet de laatste afbeelding selecteren. Wanneer je terug wil gaan met shift selecteert hij alleen de pijlen en de middelste afbeelding in plaats van alle afbeeldingen. Heel verwarrend gedrag dus.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Oplossingen:
+  Bij het horizontale scroll gedeelte alleen de pijlen en het middelste artikelen laten selecteren. Zo kan je sneller door de site en nogsteeds door de artikelen heen. Verder zou ik de focus bij sommige objecten iets duidelijker maken (dikkere omlijning, meer contrast).
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Met de shocks is het lastig om je telefoon in het algemeen vast te houden. Ook ga je snel perongeluk op dingen drukken waar je niet op wil drukken. Wat ik ook merkte was dat wanneer je je rechterhand gebruikt is het enorm lastig om op knoppen te drukken die linksbovenin zijn. Typen is ook erg lastig.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Oplossingen:
+  Ik zou grotere knoppen maken, minder content per scherm/pagina, meer knoppen in het midden ipv helemaal links of rechts, voice besturing om dingen te typen
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Met de wazige bril merkte ik vooral dat ik niet goed dunne tekst op een witte achtergrond kon lezen. Bij sommige donkere afbeeldingen kon ik ook voor een groot gedeelte niet zien wat het moest voorstellen.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Oplossingen:
+  Grotere tekst, minder tekst voor een witte achtergrond, echt zwarte tekst (niet grijs).
 </details>
 
 
@@ -116,17 +116,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Html schrijven ging goed. CSS gaat ook wel goed, maar het is toch weer even uitvinden hoe het allemaal werkt. Het is ook best frustrerend voor mij, want ik weet wat ik wil maken, maar ik doe er heel lang over om simpele dingen te doen. Momenteel heb ik een deel van de eerste pagina af (4 van de 5 sections), maar er valt nog wel wat werk te doen.
 
+  <img src="readme-images/eersteprogress1.png" width="375px" alt="eerste afbeelding van mijn site tot nu toe">
+  <img src="readme-images/eersteprogress2.png" width="375px" alt="tweede afbeelding van mijn site tot nu toe">
+  <img src="readme-images/eersteprogress3.png" width="375px" alt="derde afbeelding van mijn site tot nu toe">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+    stephan:
+    - flex wrap: het doet niet wat ik wil, hoe krijg ik er meer controle over?
+    - wat is een goede manier om afbeeldingen responsive te maken?
+    - wanneer ik een maximale breedte geef aan elementen, dan staat het niet meer in het midden. Hoe los ik dat op? 
+
+  <!-- | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | ...            | ...                | ...          | ...              | -->
 
 
   ### Verslag van meeting
@@ -149,17 +157,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  <!-- | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | Flex wrap, img      | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | ...            | ...                | ...          | ...              | -->
 
 
   ### Verslag van meeting
