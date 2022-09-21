@@ -23,7 +23,7 @@ button, summary {
 
 	--color-text:#181818;
 	--color-text-white:rgb(255, 255, 255);
-	--color-text-cta:rgb(15, 255, 27);
+	--color-text-header:#a0e080;
 
 	--h2-size: 2em;
 	--h3-size: 1.2em;
@@ -56,41 +56,24 @@ body {
 	background-color: var(--main-color-body);
 }
 
-main {
-	display: flex;
-	flex-direction: column;
-	overflow-x: hidden;
-}
-
-/* header */
-
-header {
-	background-color: var(--main-color-header);
-
-	flex-wrap: wrap;
-	padding: 1em;
-}
-
-header a {
-	color: var(--color-text-white);
-	text-decoration: none;
-}
-
-header nav ul {
-	list-style: none;
-	gap: 1em;
-}
-
 /* main */
 
 main {
 	display: flex;
+
+	flex-direction: column;
+	overflow-x: hidden;
+
 	margin: 0;
 	padding: 0;
 	background-image: url('../images/bg-wool-dark.png');
 }
 
 /* overige */
+p {
+	max-width: 30em;
+	margin: 2em auto;
+}
 
 h2 {
 	font-size: var(--h2-size);
@@ -116,8 +99,86 @@ section {
 	color: var(--color-text);
 }
 
+/**********/
+/* HEADER */
+/**********/
 
+header {
+	background-color: var(--main-color-header);
+	padding: 1em;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
 
+header a {
+	color: var(--color-text-white);
+	text-decoration: none;
+	font-weight: 900;
+	font-size: .8em;
+	text-transform: uppercase;
+}
+
+header a:nth-of-type(2) {
+	color: var(--color-text-header);
+	transition: .3s;
+}
+
+@media (min-width: 871px) {
+	header a:nth-of-type(2) {
+		text-decoration: none;
+		color: var(--color-text-white);
+	
+		background-color: var(--color-button);
+		padding: 1em 2em 1em 3em;
+		box-shadow: 
+		inset 0em .3em var(--color-button-highlight),
+		inset 0em -.3em var(--color-button-shadow),
+		0em .3em var(--shadow);
+	
+		transition: .3s;
+	}
+
+	header a:nth-of-type(2):hover {
+		background-image: linear-gradient(rgb(46, 46, 46), black);
+		box-shadow: 
+		inset 0em 0em var(--color-button-highlight),
+		inset 0em 0em var(--color-button-shadow),
+		0em 0em var(--shadow);
+	
+		transition: .3s;
+	}
+}
+
+/* hover states */
+
+header a:nth-of-type(2):hover {
+	color: var(--color-text-white);
+}
+
+header a:hover {
+	color: var(--color-text-header);
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+header img {
+	width: 20em;
+	transition: .3s;
+}
+
+@media (max-width: 695px) {
+	header img {
+		display: none;
+	}
+}
 
 /*************/
 /* SECTION 1 */
@@ -141,6 +202,8 @@ section:first-of-type {
 section > a:first-of-type {
 	position: relative;
 	top: 3em;
+	text-transform: uppercase;
+	font-weight: 900;
 
 	text-decoration: none;
 	color: var(--color-section-text);
@@ -151,9 +214,25 @@ section > a:first-of-type {
 	inset 0em .3em var(--color-button-highlight),
 	inset 0em -.3em var(--color-button-shadow),
 	0em .3em var(--shadow);
+
+	transition: .3s;
 }
 
+section > a:first-of-type.hoverAnimatie {
 
+	background-image: linear-gradient(rgb(46, 46, 46), black);
+	padding: 2em 4em 2em 4em;
+	box-shadow: 
+	inset 0em 0em var(--color-button-highlight),
+	inset 0em 0em var(--color-button-shadow),
+	0em 0em var(--shadow);
+
+	transition: .3s;
+}
+
+/* section:first-of-type p {
+	max-width: 20em;
+} */
 
 
 /*************/
@@ -163,18 +242,35 @@ section > a:first-of-type {
 section:nth-of-type(2) {
 	align-self: center;
 	text-align: center;
+	max-width: 90%;
+	width: 80em;
 
 	background-color: white;
 	margin: 5em 2em 5em 2em;
-	padding: 5em 8em 5em 8em;
+	padding: 5em 0em 5em 0em;
+
+	display: flex;
+	flex-direction: column;
 }
 
 section:nth-of-type(2) ul {
 	margin: 0;
 	padding: 0em 2em 0em 2em;
 
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1000px){
+	section:nth-of-type(2) ul {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 600px){
+	section:nth-of-type(2) ul {
+		grid-template-columns: 1fr;
+	}
 }
 
 section:nth-of-type(2) li {
@@ -188,6 +284,32 @@ section:nth-of-type(2) h2 {
 
 section:nth-of-type(2) h3 {
 	margin-top: 2em;
+}
+
+section:nth-of-type(2) img {
+	width: 100%;
+	max-width: 20em;
+}
+
+/* Animatie */
+
+@keyframes imgHover {
+	0% {
+		transform: scale(100%);
+		border: var(--color-button-highlight) solid;
+	}
+
+	100% {
+		transform: scale(105%);
+		border: var(--color-button-highlight) solid;
+	}
+}
+
+section:nth-of-type(2) img:hover {
+	animation-name: imgHover;
+	animation-duration: .5s;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
 }
 
 
@@ -217,13 +339,21 @@ section:nth-of-type(3) img {
 	border: solid;
 }
 
+
+
+
 /*************/
 /* SECTION 4 */
 /*************/
 
 section:nth-of-type(4) {
-	background-color: white;
+	background-image: url('../images/trans-top-darkwool.png'), url('../images/trans-bottom-darkwool.png'), url('../images/bg-wool-light.png');
+	background-position: top, bottom, center;
+	background-repeat: repeat-x, repeat-x, repeat;
+	
+	width: 100%;
 	padding: 5em 0 5em 0;
+	margin: 0;
 	display: flex;
 	align-self: center;
 	flex-direction: column;
@@ -251,4 +381,121 @@ section:nth-of-type(4) a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 900;
+}
+
+
+
+
+
+/*************/
+/* SECTION 5 */
+/*************/
+
+section:nth-of-type(5) {
+	background-color: white;
+	color: white;
+}
+
+section:nth-of-type(5) ul {
+	/* position: relative; */
+	width: 100%;
+	max-width: 60em;
+
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-gap: 1em;
+	align-self: center;
+	
+	padding: 1em;
+	margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+	section:nth-of-type(5) ul {
+		grid-template-columns: 2fr;
+	}
+}
+
+section:nth-of-type(5) h2 {
+	color: black;
+}
+
+section:nth-of-type(5) h2 + p {
+	color: red;
+} 
+
+section:nth-of-type(5) h3 {
+	background-color: white;
+	color: black;
+
+	font-weight: 900;
+	font-size: 1em;
+	
+	padding: 1em;
+	position: absolute;
+	top: -1.5em;
+
+	/* de onderstaande code heb ik hiervandaan: https://stackoverflow.com/questions/57042804/how-to-center-text-with-the-calc-function-in-css
+	
+	het zorgt ervoor dat een text precies wordt gecentreerd wanneer het position absolute heeft*/
+
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+section:nth-of-type(5) h4 {
+	color: white;
+
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+section:nth-of-type(5) p {
+	color: white;
+}
+
+section:nth-of-type(5) a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	transition: .2s;
+}
+
+section:nth-of-type(5) li:hover  a::before {
+	background: hsla(30, 100%, 80%, .5)
+}
+
+section:nth-of-type(5) img {
+	display: block;
+	width: 100%;
+}
+
+section:nth-of-type(5) li {
+	position: relative;
+}
+
+section:nth-of-type(5) article {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	padding: 3em 1em 1em 1em;
+
+	background-color: #0009;
+}
+
+
+
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer ul {
+	display: flex;
+	justify-content: space-between;
 }

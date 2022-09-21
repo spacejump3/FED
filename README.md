@@ -118,9 +118,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   Html schrijven ging goed. CSS gaat ook wel goed, maar het is toch weer even uitvinden hoe het allemaal werkt. Het is ook best frustrerend voor mij, want ik weet wat ik wil maken, maar ik doe er heel lang over om simpele dingen te doen. Momenteel heb ik een deel van de eerste pagina af (4 van de 5 sections), maar er valt nog wel wat werk te doen.
 
-  <img src="readme-images/eersteprogress1.png" width="375px" alt="eerste afbeelding van mijn site tot nu toe">
-  <img src="readme-images/eersteprogress2.png" width="375px" alt="tweede afbeelding van mijn site tot nu toe">
-  <img src="readme-images/eersteprogress3.png" width="375px" alt="derde afbeelding van mijn site tot nu toe">
+  <img src="readme-images/eersteprogress1.png" width="375px" alt="eerste afbeelding van mijn site in week 2">
+  <img src="readme-images/eersteprogress2.png" width="375px" alt="tweede afbeelding van mijn site in week 2">
+  <img src="readme-images/eersteprogress3.png" width="375px" alt="derde afbeelding van mijn site in week 2">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -157,11 +157,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-
-
+  Het gaat wat mij betreft heel goed, maar tegelijkertijd is er ook veel dat ik nog wil doen. Mijn eerste pagina is zo goed als af. Ik wil aan het begin van week 4 mijn tweede pagina af hebben. De rest van week 4 wil ik alleen nog de puntjes op de i zetten en extra leuke dingen toevoegen (animaties, betere vormgeving etc.).
+  <img src="readme-images/tweedeprogress1.png" width="375px" alt="eerste afbeelding van mijn site in week 3">
+  <img src="readme-images/tweedeprogress2.png" width="375px" alt="tweede afbeelding van mijn site in week 3">
+  <img src="readme-images/tweedeprogress3.png" width="375px" alt="derde afbeelding van mijn site in week 3">
+  <img src="readme-images/tweedeprogress4.png" width="375px" alt="vierde afbeelding van mijn site in week 3">
+  <img src="readme-images/tweedeprogress5.png" width="375px" alt="vijfde afbeelding van mijn site in week 3">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
+
+    Stephan:
+    -Ik wil het graag hebben over toegankelijkheid en hoe ik dat het beste kan toepassen op mijn website. Dingen als skip to content en arialabels wil ik wel meer van weten.
 
   <!-- | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
