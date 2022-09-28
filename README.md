@@ -140,10 +140,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - alle punten heb ik kunnen doen. Het waren vooral dingen die ik even ben vergeten dus het was een kwestie van mijn kennis opfrissen
+  - flex wrap hoefde niet (bij die specifieke section), grid is daar handig mee
 
 </details>
 
@@ -180,10 +178,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Ik heb de articles aan de onderkant van de pagina mooi kunnen stylen
+  - Ik heb de list items mooi naast elkaar kunnen zetten op een groot scherm
+  - Ik heb de scrollbar kunnen stylen
+  - Ik heb een hamburger menu kunnen maken voor een smaller scherm
 
 </details>
 
@@ -200,28 +198,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  -duidelijker info bij "meer info"
+  -engelse woorden worden nederlands uitsgesproken
+  -laatste articles worden niet helemaal correct uitgesproken (gebruik lang="en")
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  -hamburger menu focusable maken
+  -laatste articles focusable maken
+  -meer contrast bij focus maken
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  -linkjes met alleen tekst groter / meer padding geven (nav bar en meer info linkjes)
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  -tekst moet iets groter/meer contrast (vooral kleine button tekst en grijs op witte achtergrond tekst)
+  -meer witruimte in de alinea's
+  -geef ALLE links een hover state (lees meer links)
+  -dark/light/high contrast mode toevoegen
 </details>
 
 
@@ -234,17 +230,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Eerste pagina is nu helemaal af (kan nog wat meer bij maar in principe is het 'inleverbaar'). Tweede pagina is nu half af maar dat komt wel goed. Wat ik nu vooral moet doen is alles toegankelijkspunten verwerken en de laatste responsive dingetjes nog fixen.
 
+  <img src="readme-images/derde-progress/1.png" width="375px" alt="eerste afbeelding van mijn site in week 4">
+  <img src="readme-images/derde-progress/2.png" width="375px" alt="tweede afbeelding van mijn site in week 4">
+  <img src="readme-images/derde-progress/3.png" width="375px" alt="derde afbeelding van mijn site in week 4">
+  <img src="readme-images/derde-progress/4.png" width="375px" alt="vierde afbeelding van mijn site in week 4">
+  <img src="readme-images/derde-progress/5.png" width="375px" alt="vijfde afbeelding van mijn site in week 4">
+  <img src="readme-images/derde-progress/6.png" width="375px" alt="zesde afbeelding van mijn site in week 4">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  Stephan:
+  -Ik wil graag weten hoe ik aria labels kan toevoegen
+  -ik heb een button styling die ik wil maken met :before en :after maar ik kom er niet uit
+  -Ik moet mijn articles focusable maken. Dat lukt, maar een bepaalde animatie moet ook spelen, maar die werkt niet
+  -valid/invalid states zou ik nog wel even een recap van willen hebben
+
+  <!-- | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | ...            | ...                | ...          | ...              | -->
 
 
   ### Verslag van meeting

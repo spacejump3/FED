@@ -1,38 +1,58 @@
 <!doctype html>
 <html lang="nl">
-	
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
+	<meta name="author" content="Stephan Sierra Perdomo">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Howdy FED2223</title>
+	<title>Minecraft Legends</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-
-<body>
+<body class="pagina-2">
 	<header>
-		
-		<!-- logo -->
+		<button>menu</button>
 
-		<a href="">minecraftlogo</a>
-		
-		<!-- navigatie -->
+		<!-- normale navigatie -->
 
 		<nav>
 			<ul>
-				<li><a href="">games</a></li>
-				<li><a href="">community</a></li>
-				<li><a href="">merch</a></li>
-				<li><a href="">ondersteuning</a></li>
+				<li><a href="index.html">games</a></li>
+				<li><a href="index.html">community</a></li>
+				<li><a href="index.html">merch</a></li>
+				<li><a href="index.html">ondersteuning</a></li>
+			</ul>
+		</nav>
+		
+		<!-- hamburger -->
+
+		<nav>
+			<button>terug</button>
+			<ul>
+				<li>Games</li>
+				<li><a href="index.html">Minecraft</a></li>
+				<li><a href="index.html">Minecraft dungeons</a></li>
+				<li><a href="index.html">Minecraft Legends</a></li>
+				<li><a href="index.html">Minecraft: Education Edition</a></li>
+			</ul>
+			<ul>
+				<li><a href="index.html">community</a></li>
+				<li><a href="index.html">merch</a></li>
+				<li><a href="index.html">ondersteuning</a></li>
+				<li><a href="index.html">inwisselen</a></li>
 			</ul>
 		</nav>
 
-		<!-- download minecraft knop -->
+		<!-- logo -->
 
-		<a href="">download minecraft</a>
+		<a href="index.html">
+			<img src="images/logo-minecraft.svg" alt="minecraft logo">
+		</a>
+
+		<!-- sign up knop -->
+
+		<a href="index.html">sign up</a>
 
 	</header>
 	<main>
@@ -40,7 +60,7 @@
     <!-- eerste section -->
 
         <section>
-            <a href="">bekijk de trailer</a>
+            <a href="index.html">bekijk de nieuwste trailer</a>
             <h2>Verenig de bovenwereld</h2>
             <p>Ontdek de mysteries van Minecraft Legends, een nieuw actie-strategiespel. Ga je bondgenoten voor in heldhaftige gevechten om de Bovenwereld te beschermen tegen de vernietigende piglins.</p>
         </section>
@@ -48,9 +68,278 @@
     <!-- tweede section -->
 
         <section>
-            <form action="">
-                <input type="email">
-                <select name="" id=""></select>
+            <form>
+                <h2>Lees het laatste nieuws over Minecraft Legends!</h2>
+                <p>Voer je e-mailadres in en selecteer je land of regio en verzend het. Je kunt je op elk moment afmelden. We gaan je niet met spam bestoken. Beloofd!</p>
+                <label for"">Email Adres*
+                    <input type="email">
+                </label>
+                <label for="">Land/Regio*
+
+                <!-- Onderstaande code zorgt ervoor dat ik een placeholder kan krijgen in een select element. Bron: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box 
+                
+                Daarnaast heb ik de lijst van landen hiervandaan: https://www.html-code-generator.com/html/drop-down/country-names -->
+
+                    <select>
+                        <option value="" disabled selected>Kies je land</option>
+                        <option value="AF">Afghanistan</option>
+                        <option value="AX">Aland Islands</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AS">American Samoa</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antarctica</option>
+                        <option value="AG">Antigua and Barbuda</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermuda</option>
+                        <option value="BT">Bhutan</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BV">Bouvet Island</option>
+                        <option value="BR">Brazil</option>
+                        <option value="IO">British Indian Ocean Territory</option>
+                        <option value="BN">Brunei Darussalam</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="CV">Cape Verde</option>
+                        <option value="KY">Cayman Islands</option>
+                        <option value="CF">Central African Republic</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CX">Christmas Island</option>
+                        <option value="CC">Cocos (Keeling) Islands</option>
+                        <option value="CO">Colombia</option>
+                        <option value="KM">Comoros</option>
+                        <option value="CG">Congo</option>
+                        <option value="CD">Congo, Democratic Republic of the Congo</option>
+                        <option value="CK">Cook Islands</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="CI">Cote D'Ivoire</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CW">Curacao</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="GQ">Equatorial Guinea</option>
+                        <option value="ER">Eritrea</option>
+                        <option value="EE">Estonia</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FK">Falkland Islands (Malvinas)</option>
+                        <option value="FO">Faroe Islands</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="GF">French Guiana</option>
+                        <option value="PF">French Polynesia</option>
+                        <option value="TF">French Southern Territories</option>
+                        <option value="GA">Gabon</option>
+                        <option value="GM">Gambia</option>
+                        <option value="GE">Georgia</option>
+                        <option value="DE">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GI">Gibraltar</option>
+                        <option value="GR">Greece</option>
+                        <option value="GL">Greenland</option>
+                        <option value="GD">Grenada</option>
+                        <option value="GP">Guadeloupe</option>
+                        <option value="GU">Guam</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GG">Guernsey</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GW">Guinea-Bissau</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HT">Haiti</option>
+                        <option value="HM">Heard Island and McDonald Islands</option>
+                        <option value="VA">Holy See (Vatican City State)</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IR">Iran, Islamic Republic of</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IM">Isle of Man</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JE">Jersey</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KI">Kiribati</option>
+                        <option value="KP">Korea, Democratic People's Republic of</option>
+                        <option value="KR">Korea, Republic of</option>
+                        <option value="XK">Kosovo</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="KG">Kyrgyzstan</option>
+                        <option value="LA">Lao People's Democratic Republic</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LS">Lesotho</option>
+                        <option value="LR">Liberia</option>
+                        <option value="LY">Libyan Arab Jamahiriya</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MO">Macao</option>
+                        <option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MW">Malawi</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="ML">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MH">Marshall Islands</option>
+                        <option value="MQ">Martinique</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="MU">Mauritius</option>
+                        <option value="YT">Mayotte</option>
+                        <option value="MX">Mexico</option>
+                        <option value="FM">Micronesia, Federated States of</option>
+                        <option value="MD">Moldova, Republic of</option>
+                        <option value="MC">Monaco</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="ME">Montenegro</option>
+                        <option value="MS">Montserrat</option>
+                        <option value="MA">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="MM">Myanmar</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="AN">Netherlands Antilles</option>
+                        <option value="NC">New Caledonia</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NE">Niger</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NU">Niue</option>
+                        <option value="NF">Norfolk Island</option>
+                        <option value="MP">Northern Mariana Islands</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PW">Palau</option>
+                        <option value="PS">Palestinian Territory, Occupied</option>
+                        <option value="PA">Panama</option>
+                        <option value="PG">Papua New Guinea</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PN">Pitcairn</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="QA">Qatar</option>
+                        <option value="RE">Reunion</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russian Federation</option>
+                        <option value="RW">Rwanda</option>
+                        <option value="BL">Saint Barthelemy</option>
+                        <option value="SH">Saint Helena</option>
+                        <option value="KN">Saint Kitts and Nevis</option>
+                        <option value="LC">Saint Lucia</option>
+                        <option value="MF">Saint Martin</option>
+                        <option value="PM">Saint Pierre and Miquelon</option>
+                        <option value="VC">Saint Vincent and the Grenadines</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino</option>
+                        <option value="ST">Sao Tome and Principe</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="RS">Serbia</option>
+                        <option value="CS">Serbia and Montenegro</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SL">Sierra Leone</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SX">St Martin</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="SB">Solomon Islands</option>
+                        <option value="SO">Somalia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+                        <option value="SS">South Sudan</option>
+                        <option value="ES">Spain</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SD">Sudan</option>
+                        <option value="SR">Suriname</option>
+                        <option value="SJ">Svalbard and Jan Mayen</option>
+                        <option value="SZ">Swaziland</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="SY">Syrian Arab Republic</option>
+                        <option value="TW">Taiwan, Province of China</option>
+                        <option value="TJ">Tajikistan</option>
+                        <option value="TZ">Tanzania, United Republic of</option>
+                        <option value="TH">Thailand</option>
+                        <option value="TL">Timor-Leste</option>
+                        <option value="TG">Togo</option>
+                        <option value="TK">Tokelau</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad and Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="TM">Turkmenistan</option>
+                        <option value="TC">Turks and Caicos Islands</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="UM">United States Minor Outlying Islands</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="UZ">Uzbekistan</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Viet Nam</option>
+                        <option value="VG">Virgin Islands, British</option>
+                        <option value="VI">Virgin Islands, U.s.</option>
+                        <option value="WF">Wallis and Futuna</option>
+                        <option value="EH">Western Sahara</option>
+                        <option value="YE">Yemen</option>
+                        <option value="ZM">Zambia</option>
+                        <option value="ZW">Zimbabwe</option>
+                    </select>
+                </label>
+                <p>Door je aan te melden ga je ermee akkoord communicaties te ontvangen van Minecraft. Je kunt je altijd weer afmelden.</p>
+                <p><input type="checkbox">Ik wil graag informatie, tips en aanbiedingen van Minecraft. <a href="index.html">Privacyverklaring</a></p>
+                <p>*Dit is een verplicht veld</p>
+                <input type="submit">
             </form>
         </section>
 
@@ -58,21 +347,22 @@
         
         <section>
             <h2>Trailer bekendmaking minecraft legends</h2>
-            <a href="">
-                <img src="" alt="">
-            </a>
+            <article>
+                <img src="images/pagina-twee/mclegendsvid.webp" alt="">
+                <button>speel video af</button>
+            </article>
         </section>
 
     <!-- vierde section -->
 
         <section>
-            <img src="" alt="">
+            <img src="images/pagina-twee/mclegendspromo.webp" alt="">
             <h2>Verzamel je krachten</h2>
             <p>Verken een bekend maar mysterieus land, vol van allerlei leven, weelderige biomen en rijke bronnen. Maar dit paradijs staat op het punt om vernietigd te worden. De piglins zijn er en ze willen de Bovenwereld verpesten.</p>
-            <img src="" alt="">
+            <img src="images/pagina-twee/purplestuff.webp" alt="">
             <h2>Versla de piglins</h2>
             <p>Moedig onverwachte vrienden aan om waardevolle bondgenoten te worden en ga ze voor in heldhaftige gevechten om hun thuisland te beschermen. Ga de strijd aan met de piglins voordat de door hen verpeste Nether de hele Bovenwereld aantast!</p>
-            <img src="" alt="">
+            <img src="images/pagina-twee/mulipledevices.webp" alt="">
             <h2>Achtergronden voor minecraft legends</h2>
             <p>Ga de strijd voor de Bovenwereld aan op je favoriete apparaat met deze gratis haarscherpe afbeeldingen.</p>
             <a href="">Download nu</a>
@@ -81,23 +371,79 @@
         <!-- vijfde section -->
 
         <section>
-            <section>
-                <h2>Minecraft legends-nieuws</h2>
-                <ul>
-                    <li>
-                        <a href="">
-                            <h3>Watch the first minecraft legends dev diary</h3>
-                            <p>Join us to talk about the making of a legend</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <h2>Minecraft legends-nieuws</h2>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <article>
+                            <h3>Legends</h3>
+                            <h4>Bekijk de eerste Minecraft Legends ontwikkelaars logboek</h4>
+                            <p>Sluit bij ons aan om te praten over het creëren van een legende</p>
+                        </article>
+                    </a>
+                    <img src="images/pagina-twee/MinecraftLegends_screenshot3_tile.webp" alt="">
+                </li>
+                <li>
+                    <a href="index.html">
+                        <article>
+                            <h3>Nieuws</h3>
+                            <h4>Nieuwe Minecraft Legends trailer!</h4>
+                            <p>De strijd laait op terwijl de piglins het gevaar - en de dwaasheid brengen</p>
+                        </article>
+                    </a>
+                    <img src="images/pagina-twee/NEW_MCL_trailer-tile_1x1_Frame2.webp" alt="">
+                </li>
+                <li>
+                    <a href="index.html">
+                        <article>
+                            <h3>Fan art</h3>
+                            <h4>Minecraft Legends community ronde: fan art deel 1</h4>
+                            <p>Verenig de bovenwereld</p>
+                        </article>
+                    </a>
+                    <img src="images/pagina-twee/legends_thumbnail_277x277.webp" alt="">
+                </li>
+                <li>
+                    <a href="index.html">
+                        <article>
+                            <h3>Nieuws</h3>
+                            <h4>Minecraft Legends</h4>
+                            <p>Een nieuw actie strategiespel komt in 2022</p>
+                        </article>
+                    </a>
+                    <img src="images/pagina-twee/MinecraftLegends_KeyArt_Net_NoLogo_277x277.webp" alt="">
+                </li>
+            </ul>
         </section>
 
+        <!-- zesde section -->
+
+        <section>
+            <h2>Minecraft legends verkrijgbaar in 2023</h2>
+            <img src="images/pagina-twee/consoles.webp" alt="">
+        </section>
 	</main>
-	<footer></footer>
+	<footer>
+        <h2>Volg minecraft</h2>
+		<ul>
+			<li>
+				<img src="" alt="Youtube icoon">
+			</li>
+			<li>
+				<img src="" alt="Instagram icoon">
+			</li>
+			<li>
+				<img src="" alt="Facebook icoon">
+			</li>
+			<li>
+				<img src="" alt="Twitter icoon">
+			</li>
+			<li>
+				<img src="" alt="Reddit icoon">
+			</li>
+		</ul>
+    </footer>
 
 	<script defer src="scripts/script.js"></script>
 </body>
-	
 </html>
