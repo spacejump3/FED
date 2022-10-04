@@ -21,7 +21,7 @@ button, summary {
 
 	/* text */
 
-	--color-text:#181818;
+	--color-text:#000000;
 	--color-text-white:rgb(255, 255, 255);
 	--color-text-header:#a0e080;
 
@@ -42,6 +42,8 @@ button, summary {
 	--color-button-gold: #fad36f;
 	--color-button-gold-shadow: #de7523;
 
+	--color-button-hover-grey: linear-gradient(rgb(46, 46, 46), rgb(134, 134, 134));
+
 	--shadow: #0003;
 
 	--color-background:#eee;
@@ -50,6 +52,29 @@ button, summary {
 
 	--main-color-header: #202020;
 	--main-color-body: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+	section:nth-of-type(2) {
+		color: white;
+
+		/* onderstaande code werkt niet zonder !important. Geen idee waarom. Bron: https://forum.freecodecamp.org/t/why-is-my-background-color-not-changing/251971 */
+		background-color: black !important;
+	}
+
+	section:nth-of-type(4) {
+		background: none !important;
+		background-color: black !important;
+		color: white;
+	}
+
+	section:nth-of-type(5) {
+		background-color: var(--main-color-header) !important;
+	}
+
+	section:nth-of-type(5) h2, p {
+		color: white !important;
+	}
 }
 
 /* jouw code */
@@ -63,6 +88,12 @@ body {
 	padding: 0;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	background-color: var(--main-color-body);
+}
+
+a:focus {
+	background-color: var(--color-button);
+	color: white;
+	border: solid .1em;
 }
 
 /* main */
@@ -82,6 +113,13 @@ main {
 p {
 	max-width: 30em;
 	margin: 2em auto;
+}
+
+h1 {
+	font-size: var(--h2-size);
+	text-transform: uppercase;
+
+	margin: 0;
 }
 
 h2 {
@@ -153,6 +191,7 @@ header a {
 	font-weight: 900;
 	font-size: .8em;
 	text-transform: uppercase;
+	padding: 1em;
 }
 
 header a:nth-of-type(2) {
@@ -182,6 +221,14 @@ header a:nth-of-type(2) {
 		inset 0em 0em var(--color-button-shadow),
 		0em 0em var(--shadow);
 	}
+
+	header a:nth-of-type(2):focus {
+		background-image: linear-gradient(rgb(46, 46, 46), black);
+		box-shadow: 
+		inset 0em 0em var(--color-button-highlight),
+		inset 0em 0em var(--color-button-shadow),
+		0em 0em var(--shadow);
+	}
 }
 
 /* hamburger menu */
@@ -190,7 +237,7 @@ header a:nth-of-type(2) {
 	header {
 		position: sticky;
 		top: 0;
-		z-index: 3;
+		z-index: 6;
 	}
 
 	header img {
@@ -212,14 +259,27 @@ header a:nth-of-type(2) {
 		transition: .5s;
 	}
 
-	nav:nth-of-type(2).toonMenu, nav:focus-within {
+	nav:nth-of-type(2).toonMenu {
 		transform: translateX(0);
 	}
+
+	/* als ik de onderstaande code gebruik, werkt mijn terug knop niet meer. Dus ik weet hoe ik focus within kan gebruiken, maar niet zonder iets anders te breken */
+	
+	/* nav:nth-of-type(2).toonMenu, nav:focus-within {
+		transform: translateX(0);
+	} */
+
 
 	header nav:nth-of-type(2) ul {
 		margin: 0;
 		padding: 0;
 		position: relative;
+	}
+
+	header nav:nth-of-type(2) a:focus-visible {
+		color: var(--color-text);
+		background-color: var(--color-button-highlight);
+		font-weight: 900;	
 	}
 
 	header nav:nth-of-type(2) li {
@@ -305,14 +365,6 @@ header nav:nth-of-type(1) ul {
 /*	PAGINA 2 */
 /*************/
 
-.pagina-2 header a {
-	color: var(--color-text);
-	text-decoration: none;
-	font-weight: 900;
-	font-size: .8em;
-	text-transform: uppercase;
-}
-
 @media (min-width: 871px) {
 	.pagina-2 header a:nth-of-type(2) {
 		text-decoration: none;
@@ -322,14 +374,82 @@ header nav:nth-of-type(1) ul {
 		padding: 1em 2em 1em 2em;
 		box-shadow: inset 0em -.3em var(--color-button-gold-shadow);
 		transition: .3s;
+
+		position: relative;
 	}
 
+	.pagina-2 header a:nth-of-type(2)::before {
+		content: "";
+		width: 1em;
+		height: 60%;
+		position: absolute;
+		left: -1em;
+		top: .6em;
+	
+		background-color: var(--color-button-gold);
+		box-shadow: inset 0em -.3em var(--color-button-gold-shadow);
+
+		transition: .3s;
+	}
+	
+	.pagina-2 header a:nth-of-type(2)::after {
+		content: "";
+		width: 1em;
+		height: 60%;
+		position: absolute;
+		right: -1em;
+		top: .6em;
+	
+		background-color: var(--color-button-gold);
+		box-shadow: inset 0em -.3em var(--color-button-gold-shadow);
+
+		transition: .3s;
+	}
+
+	/* hover states  */
+
 	.pagina-2 header a:nth-of-type(2):hover {
-		background-image: linear-gradient(rgb(46, 46, 46), black);
-		box-shadow: 
-		inset 0em 0em var(--color-button-highlight),
-		inset 0em 0em var(--color-button-shadow),
-		0em 0em var(--shadow);
+		color: white;
+		background-image: var(--color-button-hover-grey);
+		box-shadow:
+		inset 0em 0em var(--color-button-gold-shadow);
+	}
+
+	.pagina-2 header a:nth-of-type(2):hover::before {
+		color: white;
+		background-image: var(--color-button-hover-grey);
+		box-shadow:
+		inset 0em 0em var(--color-button-gold-shadow);
+	}
+
+	.pagina-2 header a:nth-of-type(2):hover::after {
+		color: white;
+		background-image: var(--color-button-hover-grey);
+		box-shadow:
+		inset 0em 0em var(--color-button-gold-shadow);
+	}
+
+	/* focus states */
+
+	.pagina-2 header a:nth-of-type(2):focus {
+		color: white;
+		background-image: var(--color-button-hover-grey);
+		box-shadow:
+		inset 0em 0em var(--color-button-gold-shadow);
+	}
+
+	.pagina-2 header a:nth-of-type(2):focus::before {
+		color: white;
+		background-image: var(--color-button-hover-grey);
+		box-shadow:
+		inset 0em 0em var(--color-button-gold-shadow);
+	}
+
+	.pagina-2 header a:nth-of-type(2):focus::after {
+		color: white;
+		background-image: var(--color-button-hover-grey);
+		box-shadow:
+		inset 0em 0em var(--color-button-gold-shadow);
 	}
 }
 
@@ -380,7 +500,7 @@ section > a:first-of-type {
 	}
 }
 
-section > a:first-of-type.hoverAnimatie {
+section > a:first-of-type:hover {
 	background-image: linear-gradient(rgb(46, 46, 46), black);
 	padding: 2em 4em 2em 4em;
 	box-shadow: 
@@ -389,12 +509,39 @@ section > a:first-of-type.hoverAnimatie {
 	0em 0em var(--shadow);
 
 	transition: .3s;
+	
+}
+
+section > a:first-of-type:focus {
+	background-image: linear-gradient(rgb(46, 46, 46), black);
+	padding: 2em 4em 2em 4em;
+	box-shadow: 
+	inset 0em 0em var(--color-button-highlight),
+	inset 0em 0em var(--color-button-shadow),
+	0em 0em var(--shadow);
+
+	transition: .3s;
+	
 }
 
 /*************/
 /* SECTION 1 */
 /*	PAGINA 2 */
 /*************/
+
+@media (max-width: 463px) {
+	.pagina-2 section:first-of-type a {
+		position: relative;
+		font-size: .6em;
+	}
+
+	.pagina-2 section:first-of-type h2 {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		top: 0;
+	}
+}
 
 .pagina-2 section:first-of-type {
 	height: 50em;
@@ -412,13 +559,16 @@ section > a:first-of-type.hoverAnimatie {
 	background-color: black;
 }
 
+.pagina-2 section:first-of-type h1 {
+	visibility: hidden;
+}
+
 .pagina-2 section:first-of-type h2 {
-	margin-top: 15em;
+	margin-top: 10em;
 }
 
 .pagina-2 section:first-of-type a {
 	position: relative;
-	top: 25em;
 
 	text-decoration: none;
 	color: var(--color-text);
@@ -426,18 +576,83 @@ section > a:first-of-type.hoverAnimatie {
 	background-color: var(--color-button-blue);
 	padding: 2em 4em 2em 4em;
 	box-shadow: inset 0em -.3em var(--color-button-blue-shadow);
+
+	transition: .3s;
 }
 
 .pagina-2 section:first-of-type a::before {
-	content: "d";
-	width: 5em;
+	content: "";
+	width: 1em;
+	height: 4em;
 	position: absolute;
-	background-color: red;
 	left: -1em;
-	top: 0;
+	top: .6em;
+
+	background-color: var(--color-button-blue);
+	box-shadow: inset 0em -.3em var(--color-button-blue-shadow);
+
+	transition: .3s;
 }
 
+.pagina-2 section:first-of-type a::after {
+	content: "";
+	width: 1em;
+	height: 4em;
+	position: absolute;
+	right: -1em;
+	top: .6em;
 
+	background-color: var(--color-button-blue);
+	box-shadow: inset 0em -.3em var(--color-button-blue-shadow);
+
+	transition: .3s;
+}
+
+/* hover states */
+
+.pagina-2 section:first-of-type a:hover {
+	color: white;
+	background-image: var(--color-button-hover-grey);
+	box-shadow:
+	inset 0em 0em var(--color-button-blue-shadow);
+}
+
+.pagina-2 section:first-of-type a:hover::before {
+	color: white;
+	background-image: var(--color-button-hover-grey);
+	box-shadow:
+	inset 0em 0em var(--color-button-blue-shadow);
+}
+
+.pagina-2 section:first-of-type a:hover::after {
+	color: white;
+	background-image: var(--color-button-hover-grey);
+	box-shadow:
+	inset 0em 0em var(--color-button-blue-shadow);
+}
+
+/* focus states */
+
+.pagina-2 section:first-of-type a:focus {
+	color: white;
+	background-image: var(--color-button-hover-grey);
+	box-shadow:
+	inset 0em 0em var(--color-button-blue-shadow);
+}
+
+.pagina-2 section:first-of-type a:focus::before {
+	color: white;
+	background-image: var(--color-button-hover-grey);
+	box-shadow:
+	inset 0em 0em var(--color-button-blue-shadow);
+}
+
+.pagina-2 section:first-of-type a:focus::after {
+	color: white;
+	background-image: var(--color-button-hover-grey);
+	box-shadow:
+	inset 0em 0em var(--color-button-blue-shadow);
+}
 
 
 
@@ -527,11 +742,15 @@ section:nth-of-type(2) img:hover {
 	width: 100vw;
 	max-width: 100%;
 	margin: 0;
-	padding: 0em 0em 5em 0em;
+	padding: 0em 0em 15em 0em;
 
 	background-color: var(--color-background-pagina-2-section);
 	display: flex;
 	flex-direction: column;
+
+	background-image: url("..//images/pagina-twee/MCL_Transition_White-Glow_02.jpg");
+	background-position: bottom;
+	background-repeat: repeat-x;
 }
 
 .pagina-2 section:nth-of-type(2) h2 {
@@ -542,7 +761,6 @@ section:nth-of-type(2) img:hover {
 .pagina-2 section:nth-of-type(2) p {
 	margin: 1em 0;
 }
-
 
 .pagina-2 section:nth-of-type(2) form {
 	margin: auto;
@@ -570,6 +788,38 @@ section:nth-of-type(2) img:hover {
 	font-weight: 900;
 }
 
+.pagina-2 input[type=submit] {
+	background-color: var(--color-button-blue);
+	padding: 1em 2em;
+	box-shadow: inset 0em -.3em var(--color-button-blue-shadow);
+	border: none;
+
+	text-transform: uppercase;
+	font-weight: 900;
+	transition: .3s;
+}
+
+.pagina-2 input[type=submit]:hover {
+	background-image: var(--color-button-hover-grey);
+	color: white;
+	box-shadow: inset 0em 0em var(--color-button-blue-shadow);
+	cursor: pointer;
+}
+
+.pagina-2 input[type=submit]:focus {
+	background-image: var(--color-button-hover-grey);
+	color: white;
+	box-shadow: inset 0em 0em var(--color-button-blue-shadow);
+
+}
+
+.pagina-2 input[type=submit] {
+	content: "helloo";
+}
+
+input[type=email]:valid {
+	background-color: lightgreen;
+}
 
 
 
@@ -594,10 +844,11 @@ section:nth-of-type(3) p {
 	margin-top: 0;
 }
 
-section:nth-of-type(3) h3 {
+section:nth-of-type(3) footer {
 	position: relative;
 	background-color: white;
 	color: black;
+	text-transform: uppercase;
 
 	font-weight: 900;
 	font-size: .8em;
@@ -609,8 +860,14 @@ section:nth-of-type(3) h3 {
 	z-index: 5;
 }
 
-section:nth-of-type(3) h4 {
+section:nth-of-type(3) h3 {
+	color: var(--color-text-white);
+
 	text-transform: uppercase;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	margin: 1em 0;
 }
 
 section:nth-of-type(3) ul {
@@ -673,15 +930,14 @@ section:nth-of-type(3) ::-webkit-scrollbar-thumb:active {
 .pagina-2 section:nth-of-type(3) img {
 	max-width: 90%;
 	align-self: center;
+	border: none;
 }
 
 .pagina-2 section:nth-of-type(3) h2 {
 	padding: 2em 0;
 }
 
-.pagina-2 section:nth-of-type(3) article {
-	display: flex;
-	flex-direction: column;
+.pagina-2 section:nth-of-type(3) div {
 	position: relative;
 	padding-bottom: 4em;
 }
@@ -696,7 +952,45 @@ section:nth-of-type(3) ::-webkit-scrollbar-thumb:active {
 	padding: 2em;
 	background-color: var(--color-button-blue);
 	border: solid .5em lightskyblue;
+	border-radius: 10em;
 	border-bottom: solid .5em var(--color-button-blue-shadow);
+
+	background-image: url(../images/play.png);
+	background-position: center;
+
+	transition: .3s;
+
+}
+
+.pagina-2 section:nth-of-type(3) button:hover {
+
+	background-color: rgb(66, 66, 66);
+	border: solid 0em lightskyblue;
+	border-radius: 10em;
+	border-bottom: solid 0em var(--color-button-blue-shadow);
+
+	width: 6em;
+	height: 6em;
+
+	background-image: url(../images/play.png);
+	background-position: center;
+	background-repeat: no-repeat;
+
+}
+
+.pagina-2 section:nth-of-type(3) button:focus {
+
+	background-color: rgb(66, 66, 66);
+	border: solid 0em lightskyblue;
+	border-radius: 10em;
+	border-bottom: solid 0em var(--color-button-blue-shadow);
+
+	width: 6em;
+	height: 6em;
+
+	background-image: url(../images/play.png);
+	background-position: center;
+	background-repeat: no-repeat;
 
 }
 
@@ -742,6 +1036,17 @@ section:nth-of-type(4) a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 900;
+}
+
+section:nth-of-type(4) a:hover {
+	color: white;
+	background-color: var(--color-button);
+	border: solid .1em var(--color-button);
+	border-radius: .2em;
+}
+
+section:nth-of-type(4) a:focus {
+	color: white;
 }
 
 @media (min-width: 1100px){
@@ -804,6 +1109,10 @@ section:nth-of-type(4) a {
 	margin: 2em auto;
 }
 
+.pagina-2 section:nth-of-type(4) a {
+	color: var(--color-text-white);
+}
+
 
 
 /*************/
@@ -849,10 +1158,11 @@ section:nth-of-type(5) h2 + p {
 	color: var(--color-text);
 } 
 
-section:nth-of-type(5) h3 {
+section:nth-of-type(5) footer {
 	background-color: white;
 	color: black;
 
+	text-transform: uppercase;
 	font-weight: 900;
 	font-size: 1em;
 	
@@ -868,7 +1178,7 @@ section:nth-of-type(5) h3 {
     transform: translateX(-50%);
 }
 
-section:nth-of-type(5) h4 {
+section:nth-of-type(5) h3 {
 	color: var(--color-text-white);
 
 	font-weight: 900;
@@ -892,19 +1202,15 @@ section:nth-of-type(5) a::before {
 /* focus state */
 
 section:nth-of-type(5) a:focus::before {
-	background-color: rgba(0, 128, 0, 0.219);
-	border: solid 1em green;
+	border: solid .5em rgb(34, 131, 25);
+	background-color: #FFF2;
 }
-
-/* section:nth-of-type(5) li article {
-	transform: translateY(0);
-} */
 
 section:nth-of-type(5) a:focus li img {
 	transform: scale(1.1);
 }
 
-section:nth-of-type(5) article {
+section:nth-of-type(5) div {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -919,7 +1225,7 @@ section:nth-of-type(5) article {
 	transition: .5s;
 }
 
-section:nth-of-type(5) li:hover article {
+section:nth-of-type(5) li:hover div {
 	transform: translateY(0);
 }
 
@@ -964,6 +1270,14 @@ section:nth-of-type(5) button:hover {
 	0em 0em var(--shadow);
 }
 
+section:nth-of-type(5) button:focus {
+	background-image: linear-gradient(rgb(46, 46, 46), black);
+	box-shadow: 
+	inset 0em 0em var(--color-button-highlight),
+	inset 0em 0em var(--color-button-shadow),
+	0em 0em var(--shadow);
+}
+
 /*************/
 /* SECTION 5 */
 /*	PAGINA 2 */
@@ -995,6 +1309,9 @@ section:nth-of-type(5) button:hover {
 	margin: 1em 0;
 }
 
+.pagina-2 section:nth-of-type(6) img {
+	max-width: 100%;
+}
 
 
 
@@ -1004,8 +1321,22 @@ section:nth-of-type(5) button:hover {
 /* FOOTER */
 /**********/
 
+footer h2 {
+	color: white;
+	text-align: center;
+	margin: 1em 0;
+}
+
 footer ul {
+	margin: 0;
+	padding: 0;
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0 2em;
+}
+
+footer a:focus {
+	border: solid .1em white;
+	background: none;
 }

@@ -1,20 +1,6 @@
 // JavaScript Document
 console.log("hi");
 
-let groeneButton = document.querySelector("section > a:first-of-type")
-
-groeneButton.addEventListener("mouseover", buttonAnimatie)
-
-groeneButton.addEventListener("mouseout", buttonAnimatieWeg)
-
-function buttonAnimatie() {
-    groeneButton.classList.add("hoverAnimatie")
-}
-
-function buttonAnimatieWeg() {
-    groeneButton.classList.remove("hoverAnimatie")
-}
-
 // hamburger menu
 
 let burgerKnop = document.querySelector("header > button:first-of-type")
@@ -31,4 +17,16 @@ function openMenu() {
 
 function sluitMenu() {
     mobileNav.classList.remove("toonMenu")
+}
+
+// muziekje
+
+let meerLadenKnop = document.querySelector("section:nth-of-type(5) button")
+let backgroundMusic = document.querySelector("audio")
+
+meerLadenKnop.addEventListener("click", speelMuziek)
+
+function speelMuziek() {
+    backgroundMusic.play()
+    backgroundMusic.volume = .4
 }

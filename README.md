@@ -41,15 +41,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Minecraft homepage  
-  <img src="readme-images/eerstepagina1.png" width="375px" alt="omschrijving van de pagina">
-  <img src="readme-images/eerstepagina2.png" width="375px" alt="omschrijving van de pagina">
-  <img src="readme-images/eerstepagina3.png" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/eerstepagina1.png" width="375px" alt="minecraft homepage screenshot 1">
+  <img src="readme-images/eerstepagina2.png" width="375px" alt="minecraft homepage screenshot 2">
+  <img src="readme-images/eerstepagina3.png" width="375px" alt="minecraft homepage screenshot 3">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Minecraft community page
-  <img src="readme-images/tweedepagina1.png" width="375px" alt="omschrijving van de pagina">
-  <img src="readme-images/tweedepagina2.png" width="375px" alt="omschrijving van de pagina">
-  <img src="readme-images/tweedepagina3.png" width="375px" alt="omschrijving van de pagina">
+  Minecraft legends pagina
+  <img src="readme-images/pagina-2-afbeeldingen/pagina-2-3.png" width="375px" alt="minecraft legends screenshot 1">
+  <img src="readme-images/pagina-2-afbeeldingen/pagina-2-2.png" width="375px" alt="minecraft legends screenshot 2">
+  <img src="readme-images/pagina-2-afbeeldingen/pagina-2-1.png" width="375px" alt="minecraft legends screenshot 3">
  
 </details>
 
@@ -96,13 +96,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/website-breakdown.png" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
@@ -258,10 +252,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - In de html sommige articles in een div veranderen
+  - In de html de incorrecte h3's een footer maken
+  - valid/invalid states toepassen
 
 </details>
 
@@ -275,19 +268,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eindresultaat/knipsel.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/eindresultaat/knipsel0.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/eindresultaat/knipsel2.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/eindresultaat/knipsel3.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/eindresultaat/knipsel4.png" width="375px" alt="uitkomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Wat ik vooral heb geleerd is hoe belangrijk toegankelijkheid is, en manieren hoe je dat kan toepassen op je website. Ook heb ik geleerd hoe je dingen redelijk goed responsive kan maken, dat vind ik best lastig, maar ik heb nu denk ik wel een beter idee van hoe je dat goed doet. Grid is ook één van de fijnste dingen die ik heb geleerd en ga ik zeker vaker in de toekomst gebruiken. Verder ben ik in het algemeen een stuk beter en sneller geworden in het maken van een mooie website. Het begint steeds meer te kloppen in mijn hoofd. 
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Sommige kleine dingen zoals focus within werkte niet zo goed, mijn darkmode is ook niet helemaal lekker. Focus state op de laatste paar links (community creaties) werkt ook niet helemaal zoals ik wil. Dat komt dus omdat er allemaal lists en unordered lists inzitten, en daardoor raak ik een beetje verward. Ik denk ook achteraf dat ik mediaquery's iets netter had kunnen gebruiken in mijn website. Er valt nog wel wat op te schonen in dat opzicht.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
@@ -301,8 +295,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. !important toevoeging: https://forum.freecodecamp.org/t/why-is-my-background-color-not-changing/251971 
+  2. items centreren calc truc: https://stackoverflow.com/questions/57042804/how-to-center-text-with-the-calc-function-in-css
+  3. placeholder in select element: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box
+  4. alle landen: https://www.html-code-generator.com/html/drop-down/country-names
+  5. muziek: Wet Hand - C418 https://www.youtube.com/watch?v=MSepOYJxB64 
+
+
 
 </details>

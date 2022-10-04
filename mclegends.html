@@ -60,9 +60,10 @@
     <!-- eerste section -->
 
         <section>
-            <a href="index.html">bekijk de nieuwste trailer</a>
+            <h1>Welkom bij Minecraft Legends</h1>
             <h2>Verenig de bovenwereld</h2>
             <p>Ontdek de mysteries van Minecraft Legends, een nieuw actie-strategiespel. Ga je bondgenoten voor in heldhaftige gevechten om de Bovenwereld te beschermen tegen de vernietigende piglins.</p>
+            <a href="index.html">bekijk de nieuwste trailer</a>
         </section>
 
     <!-- tweede section -->
@@ -71,16 +72,16 @@
             <form>
                 <h2>Lees het laatste nieuws over Minecraft Legends!</h2>
                 <p>Voer je e-mailadres in en selecteer je land of regio en verzend het. Je kunt je op elk moment afmelden. We gaan je niet met spam bestoken. Beloofd!</p>
-                <label for"">Email Adres*
-                    <input type="email">
+                <label>Email Adres*
+                    <input type="email" placeholder="Vul je e-mailadres in. Bijv: janjaap@hotmail.com" aria-label="Dit email-adres veld is verplicht" required>
                 </label>
-                <label for="">Land/Regio*
+                <label>Land/Regio*
 
                 <!-- Onderstaande code zorgt ervoor dat ik een placeholder kan krijgen in een select element. Bron: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box 
                 
                 Daarnaast heb ik de lijst van landen hiervandaan: https://www.html-code-generator.com/html/drop-down/country-names -->
 
-                    <select>
+                    <select aria-label="Kies je land. Dit veld is verplicht">
                         <option value="" disabled selected>Kies je land</option>
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Aland Islands</option>
@@ -337,9 +338,10 @@
                     </select>
                 </label>
                 <p>Door je aan te melden ga je ermee akkoord communicaties te ontvangen van Minecraft. Je kunt je altijd weer afmelden.</p>
-                <p><input type="checkbox">Ik wil graag informatie, tips en aanbiedingen van Minecraft. <a href="index.html">Privacyverklaring</a></p>
+                <input type="checkbox" id="akkoord"> <label for="akkoord">Ik wil graag informatie, tips en aanbiedingen van Minecraft. <a href="index.html">Privacyverklaring</a>
+                </label>
                 <p>*Dit is een verplicht veld</p>
-                <input type="submit">
+                <input type="submit" value="Indienen">
             </form>
         </section>
 
@@ -347,10 +349,10 @@
         
         <section>
             <h2>Trailer bekendmaking minecraft legends</h2>
-            <article>
-                <img src="images/pagina-twee/mclegendsvid.webp" alt="">
-                <button>speel video af</button>
-            </article>
+            <div>
+                <img src="images/pagina-twee/mclegendsvid.webp" alt="minecraft legens promotie beeld">
+                <button aria-label="speel de minecraft legends trailer af"></button>
+            </div>
         </section>
 
     <!-- vierde section -->
@@ -359,10 +361,10 @@
             <img src="images/pagina-twee/mclegendspromo.webp" alt="">
             <h2>Verzamel je krachten</h2>
             <p>Verken een bekend maar mysterieus land, vol van allerlei leven, weelderige biomen en rijke bronnen. Maar dit paradijs staat op het punt om vernietigd te worden. De piglins zijn er en ze willen de Bovenwereld verpesten.</p>
-            <img src="images/pagina-twee/purplestuff.webp" alt="">
+            <img src="images/pagina-twee/purplestuff.webp" alt="afbeelding van twee piglins voor een portaal">
             <h2>Versla de piglins</h2>
             <p>Moedig onverwachte vrienden aan om waardevolle bondgenoten te worden en ga ze voor in heldhaftige gevechten om hun thuisland te beschermen. Ga de strijd aan met de piglins voordat de door hen verpeste Nether de hele Bovenwereld aantast!</p>
-            <img src="images/pagina-twee/mulipledevices.webp" alt="">
+            <img src="images/pagina-twee/mulipledevices.webp" alt="afbeelding van een laptop, monitorscherm, telefoon en tablet met een minecraft legends achtergrond">
             <h2>Achtergronden voor minecraft legends</h2>
             <p>Ga de strijd voor de Bovenwereld aan op je favoriete apparaat met deze gratis haarscherpe afbeeldingen.</p>
             <a href="">Download nu</a>
@@ -375,43 +377,43 @@
             <ul>
                 <li>
                     <a href="index.html">
-                        <article>
-                            <h3>Legends</h3>
-                            <h4>Bekijk de eerste Minecraft Legends ontwikkelaars logboek</h4>
+                        <div>
+                            <footer>Legends</footer>
+                            <h3>Bekijk de eerste Minecraft Legends ontwikkelaars logboek</h3>
                             <p>Sluit bij ons aan om te praten over het creëren van een legende</p>
-                        </article>
+                        </div>
                     </a>
-                    <img src="images/pagina-twee/MinecraftLegends_screenshot3_tile.webp" alt="">
+                    <img src="images/pagina-twee/MinecraftLegends_screenshot3_tile.webp" alt="afbeelding van een tempel in minecraft legends">
                 </li>
                 <li>
                     <a href="index.html">
-                        <article>
-                            <h3>Nieuws</h3>
-                            <h4>Nieuwe Minecraft Legends trailer!</h4>
+                        <div>
+                            <footer>Nieuws</footer>
+                            <h3>Nieuwe Minecraft Legends trailer!</h3>
                             <p>De strijd laait op terwijl de piglins het gevaar - en de dwaasheid brengen</p>
-                        </article>
+                        </div>
                     </a>
-                    <img src="images/pagina-twee/NEW_MCL_trailer-tile_1x1_Frame2.webp" alt="">
+                    <img src="images/pagina-twee/NEW_MCL_trailer-tile_1x1_Frame2.webp" alt="illustratie van een piglin">
                 </li>
                 <li>
                     <a href="index.html">
-                        <article>
-                            <h3>Fan art</h3>
-                            <h4>Minecraft Legends community ronde: fan art deel 1</h4>
+                        <div>
+                            <footer>Fan art</footer>
+                            <h3>Minecraft Legends community ronde: fan art deel 1</h3>
                             <p>Verenig de bovenwereld</p>
-                        </article>
+                        </div>
                     </a>
-                    <img src="images/pagina-twee/legends_thumbnail_277x277.webp" alt="">
+                    <img src="images/pagina-twee/legends_thumbnail_277x277.webp" alt="landschap screenshot in minecraft">
                 </li>
                 <li>
                     <a href="index.html">
-                        <article>
-                            <h3>Nieuws</h3>
-                            <h4>Minecraft Legends</h4>
+                        <div>
+                            <footer>Nieuws</footer>
+                            <h3>Minecraft Legends</h3>
                             <p>Een nieuw actie strategiespel komt in 2022</p>
-                        </article>
+                        </div>
                     </a>
-                    <img src="images/pagina-twee/MinecraftLegends_KeyArt_Net_NoLogo_277x277.webp" alt="">
+                    <img src="images/pagina-twee/MinecraftLegends_KeyArt_Net_NoLogo_277x277.webp" alt="promo beeld van minecraft legends">
                 </li>
             </ul>
         </section>
@@ -420,26 +422,26 @@
 
         <section>
             <h2>Minecraft legends verkrijgbaar in 2023</h2>
-            <img src="images/pagina-twee/consoles.webp" alt="">
+            <img src="images/pagina-twee/consoles.webp" alt="je kan minecraft legends spelen op xbox gamepass, xbox, windows, nintendo switch, playstation en steam">
         </section>
 	</main>
 	<footer>
         <h2>Volg minecraft</h2>
 		<ul>
 			<li>
-				<img src="" alt="Youtube icoon">
+				<a href="index.html"><img src="images/sm-icoon-01.png" alt="Facebook icoon"></a>
 			</li>
 			<li>
-				<img src="" alt="Instagram icoon">
+				<a href="index.html"><img src="images/sm-icoon-02.png" alt="Reddit icoon"></a>
 			</li>
 			<li>
-				<img src="" alt="Facebook icoon">
+				<a href="index.html"><img src="images/sm-icoon-03.png" alt="Twitter icoon"></a>
 			</li>
 			<li>
-				<img src="" alt="Twitter icoon">
+				<a href="index.html"><img src="images/sm-icoon-04.png" alt="Youtube icoon"></a>
 			</li>
 			<li>
-				<img src="" alt="Reddit icoon">
+				<a href="index.html"><img src="images/sm-icoon-05.png" alt="Intragram icoon"></a>
 			</li>
 		</ul>
     </footer>
